@@ -14,7 +14,6 @@ ATestingGroundsHUD::ATestingGroundsHUD()
 	CrosshairTex = CrosshairTexObj.Object;
 }
 
-
 void ATestingGroundsHUD::DrawHUD()
 {
 	Super::DrawHUD();
