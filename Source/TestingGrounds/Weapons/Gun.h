@@ -49,6 +49,7 @@ public:
 	virtual void BeginPlay() override;	
 	
 	/** Fires a projectile. */
+	UFUNCTION(BlueprintCallable, Category = "Input")
 	void OnFire();
 
 };
