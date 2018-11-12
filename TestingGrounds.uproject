@@ -7,15 +7,13 @@
 		{
 			"Name": "TestingGrounds",
 			"Type": "Runtime",
-<<<<<<< HEAD
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"AIModule",
-				"Engine"
-			]
-=======
+				"Engine",
+				"AIModule"
+			],
 			"LoadingPhase": "Default"
->>>>>>> parent of e0acdde... Test
+
 		}
 	]
 }
