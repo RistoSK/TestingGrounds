@@ -26,10 +26,17 @@ public:
 
 	/** AnimMontage to play each time we fire */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-		class UAnimMontage* FireAnimation;
+		class UAnimMontage* FP_FireAnimation;
 
+	/** AnimMontage to play each time we fire */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-		class UAnimInstance* AnimInstance;
+		class UAnimMontage* TP_FireAnimation;
+
+	UPROPERTY()
+		class UAnimInstance* FP_AnimInstance;
+
+	UPROPERTY()
+		class UAnimInstance* TP_AnimInstance;
 
 	/** Projectile class to spawn */
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
