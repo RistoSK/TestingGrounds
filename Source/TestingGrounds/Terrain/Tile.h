@@ -28,6 +28,16 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Spawning")
+		FVector MinExtend;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Spawning")
+		FVector MaxExtend;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Navigation")
+		FVector NavigationBoundsOffSet;
 private:
 
 	bool FindEmptyLocation(FVector& OutLocation, float Radius);
@@ -36,5 +46,10 @@ private:
 
 	bool CanSpawnAtLocation(FVector Location, float Radious);
 
+	void PositionNavMeshBoundsVolume();
+
 	UActorPool* Pool;
+
+	AActor* NavMeshBoundsVolume;
+
 };

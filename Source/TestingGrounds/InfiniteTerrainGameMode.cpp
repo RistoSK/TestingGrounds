@@ -18,7 +18,7 @@ void AInfiniteTerrainGameMode::PopulateBoundsVolumePool()
 	while (VolumeIterator) 
 	{
 		ANavMeshBoundsVolume* VolumeToAdd = *VolumeIterator;
-
+		
 		AddToPool(VolumeToAdd);
 
 		++VolumeIterator; // Goes to the next actor
@@ -29,5 +29,5 @@ void AInfiniteTerrainGameMode::PopulateBoundsVolumePool()
 
 void AInfiniteTerrainGameMode::AddToPool(ANavMeshBoundsVolume *VolumeToAdd)
 {
-		UE_LOG(LogTemp, Warning, TEXT("Found Volume: %s"), *VolumeToAdd->GetName());
+	NavMeshBoundsVolumePool->Add(VolumeToAdd);
 }

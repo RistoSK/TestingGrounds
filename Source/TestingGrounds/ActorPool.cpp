@@ -14,15 +14,18 @@ UActorPool::UActorPool()
 
 AActor* UActorPool::Checkout() 
 {
-	return nullptr;
+	UE_LOG(LogTemp, Warning, TEXT("[%s] Checkout."), *GetName());
+	if (Pool.Num() == 0) { return nullptr; }
+	return Pool.Pop();
 }
 
-void UActorPool::Return(AActor * ActorToReturn)
+void UActorPool::Return(AActor * ActorToAdd)
 {
-
+	Add(ActorToAdd);
 }
 
 void UActorPool::Add(AActor * ActorToAdd)
 {
-
+	if (ActorToAdd == nullptr) { return; }
+	Pool.Push(ActorToAdd);
 }
